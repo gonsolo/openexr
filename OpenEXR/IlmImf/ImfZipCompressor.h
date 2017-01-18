@@ -73,7 +73,7 @@ class ZipCompressor: public Compressor
 			    const char *&outPtr);
   private:
 
-    int		_maxScanLineSize;
+//    int		_maxScanLineSize;
     int		_numScanLines;
     char *	_outBuffer;
     Zip     _zip;

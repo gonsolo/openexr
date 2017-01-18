@@ -126,4 +126,17 @@ CpuId::CpuId():
     }
 }
 
+void* EXRAllocAligned(size_t size, size_t alignment)
+{
+    void* ptr = 0;
+    posix_memalign(&ptr, alignment, size);
+    return ptr;
+}
+
+
+void EXRFreeAligned(void* ptr)
+{
+    free(ptr);
+}
+
 OPENEXR_IMF_INTERNAL_NAMESPACE_SOURCE_EXIT

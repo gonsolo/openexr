@@ -98,7 +98,7 @@ class IMF_EXPORT PizCompressor: public Compressor
 				    IMATH_NAMESPACE::Box2i range,
 				    const char *&outPtr);
 
-    int			_maxScanLineSize;
+//    int			_maxScanLineSize;
     Format		_format;
     int			_numScanLines;
     unsigned short *	_tmpBuffer;

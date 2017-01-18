@@ -59,8 +59,12 @@ Mutex::Mutex ()
 
 Mutex::~Mutex ()
 {
+#ifdef NDEBUG
+    ::pthread_mutex_destroy (&_mutex);
+#else
     int error = ::pthread_mutex_destroy (&_mutex);
     assert (error == 0);
+#endif
 }
 
 

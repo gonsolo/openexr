@@ -80,8 +80,12 @@ Thread::Thread ()
 
 Thread::~Thread ()
 {
+#ifdef NDEBUG
+    ::pthread_join (_thread, 0);
+#else
     int error = ::pthread_join (_thread, 0);
     assert (error == 0);
+#endif
 }
 
 
