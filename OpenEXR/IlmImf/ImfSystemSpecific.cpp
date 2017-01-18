@@ -126,6 +126,8 @@ CpuId::CpuId():
     }
 }
 
+#ifndef _MSC_VER
+
 void* EXRAllocAligned(size_t size, size_t alignment)
 {
     void* ptr = 0;
@@ -133,10 +135,11 @@ void* EXRAllocAligned(size_t size, size_t alignment)
     return ptr;
 }
 
-
 void EXRFreeAligned(void* ptr)
 {
     free(ptr);
 }
+
+#endif
 
 OPENEXR_IMF_INTERNAL_NAMESPACE_SOURCE_EXIT
