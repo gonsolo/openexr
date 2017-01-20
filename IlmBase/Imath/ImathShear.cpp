@@ -32,23 +32,18 @@
 //
 ///////////////////////////////////////////////////////////////////////////
 
-
-
-
 //----------------------------------------------------------------------------
 //
 //	Specializations of the Shear6<T> template.
 //
 //----------------------------------------------------------------------------
 
+#if 0
 #include "ImathShear.h"
 
 IMATH_INTERNAL_NAMESPACE_SOURCE_ENTER
 
-
-
 // empty
 
-
-
 IMATH_INTERNAL_NAMESPACE_SOURCE_EXIT
+#endif
